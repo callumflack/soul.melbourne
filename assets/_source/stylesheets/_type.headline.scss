@@ -1,0 +1,149 @@
+
+
+// --------------------------------------------------------------------------
+//   HEADLINE TYPOGRAPHY
+// --------------------------------------------------------------------------
+
+
+// Common theme…
+
+@mixin headlineTemplate(
+	$mixinSize: headline,
+	$mixinColor: palette(text),
+	$mixinFont: $font-text-regular,
+	$mixinLetterSpacing: 0.01em,
+	$mixinLineHeight: 1.25,
+	$mixinMarginBottom: 0
+) {
+
+	// standards
+	color: $mixinColor;
+	font-family: $mixinFont;
+	letter-spacing: $mixinLetterSpacing;
+	line-height: $mixinLineHeight;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $mixinMarginBottom;
+	text-align: left;
+
+	// sizes
+	font-size: fontsize($mixinSize, xs);
+	@include media-breakpoint-up(sm) { font-size: fontsize($mixinSize, sm); }
+	@include media-breakpoint-up(lg) { font-size: fontsize($mixinSize, lg); }
+
+	// children
+	> li,
+	> li a,
+	> a {
+		border-bottom: 0;
+		color: currentColor;
+		font-family: inherit;
+		font-size: inherit;
+		margin: 0;
+	}
+}
+
+
+// Component by size…
+
+@mixin display() {
+    @include headlineTemplate(
+        $mixinFont: $font-text-ultrabold,
+        $mixinLetterSpacing: .1em,
+        $mixinLineHeight: 1,
+        $mixinSize: display
+    );
+
+    margin-bottom: $blockSpace * 0.9;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+        border-top: 10px solid palette(text);
+        border-bottom: 10px solid palette(text);
+        display: inline-block;
+        padding: space(0.75) 0;
+        transform: rotate(-7deg);
+
+        em {
+            display: inline-block;
+            font-family: $serif-font-stack;
+            margin: 0 space(0.25);
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        span { border-width: 7px; }
+    }
+}
+
+@mixin headline() {
+	@include headlineTemplate(
+		$mixinLineHeight: $base-line-height-unit
+	);
+}
+
+@mixin headlineSm() {
+    @include headlineTemplate(
+        $mixinColor: palette(text),
+        $mixinFont: $font-text-ultrabold,
+        $mixinLineHeight: $base-line-height-unit,
+        $mixinSize: headline--sm
+    );
+
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+        margin-top: $blockSpace * 0.4;
+    }
+}
+
+@mixin headlineXs() {
+    @include headlineTemplate(
+        $mixinSize: headline--xs,
+        $mixinLetterSpacing: 0.012em
+    );
+}
+
+
+
+
+// Component: headline
+// --------------------------------------------------------------------------
+
+h1                  { @include display(); }
+h2                  { @include headline(); margin-bottom: $paragraphSpace; }
+h3                  { @include headlineSm(); }
+
+
+.c-display          { @include display(); }
+//.c-headline         { @include headline(); font-family: 'jupiter'; }
+.c-headline         { @include headline(); }
+.c-headline--sm     { @include headlineSm(); }
+.c-headline--smSemi { @include headlineSm(); font-family: $font-text-semibold; }
+.c-headline--xs     { @include headlineXs(); }
+.c-headline--xsSemi { @include headlineXs(); font-family: $font-text-semibold; }
+
+.c-headline em {
+	font-family: inherit;
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+
+// Vars
+// --------------------------------------------------------------------------
+
+h2 {
+    @include when-inside(".Grid-cell.u-sm-size3of12") {
+        //transform: translateY(-13px);
+        transform: translateY(-0.2em);
+    }
+}
+
+
+// Component: headline blocks.
+// --------------------------------------------------------------------------
+
+// .Headline-block { > * { @include headline(); } }

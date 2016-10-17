@@ -1,0 +1,52 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# For SEO, see: https://github.com/jekyll/jekyll-seo-tag
+# Keep descriptions to ~155 characters: https://moz.com/learn/seo/meta-description
+title: Australian National Northern Soul Weekender Melbourne 2016
+description: |
+    Melbourne hosts the 19th Australian National Northern Soul Weekender, November 2016. DJs will showcase their rare soul collections over 3 nights on original vinyl only.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://soul.melbourne" # the base hostname & protocol for your site
+logo: "/assets/images/logo.png"
+imageurl: "/assets/images/"
+javascriptsurl: "/assets/javascripts/"
+google-analytics: UA-85756359-1
+twitter:
+    username: patternworks #twitter:site
+author:
+    twitter: patternworks #twitter:creator
+
+# Defaults
+
+# Collections
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+# Build settings
+exclude:
+- assets/_source
+- CNAME
+- Gemfile
+- Gemfile.lock
+- gulpfile.js
+- node_modules
+- package.json
+- README.md
+- TODO.md
+- DESCRIPTION.md
+
+# Plugin settings
+gems:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag

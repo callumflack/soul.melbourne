@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+{% comment %}
+    markup for ! Modernizr.objectfit:
+    <header class="c-header o-posAbsoluteCenterAlt c-imageBlend o-coverImage" role="banner" style="background-image: url('/assets/images/header.jpg')">
+{% endcomment %}
+
+<header class="c-header" role="banner">
+    {% assign image = "header" %}
+    {% include responsive-image.html %}
+
+	<div class="c-header-wrapper">
+		<div class="o-aligner">
+			<div class="o-aligner-item">
+				<div class="o-container c-hero">
+                    <figure class="c-logo">
+                        <svg class="">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+                        </svg>
+                    </figure>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+<main class="c-main" aria-label="Content">
+
+    <div class="o-container">
+
+        {% for section in page.sections %}
+
+            <section class="c-section {% if section.locations %}c-section--locations{% endif %}">
+                {% if section.headline %}
+                    <h1 class=""><span><em>“</em>This Gets To Me<em>”</em></span></h1>
+                {% endif %}
+
+                <div class="Grid Grid--withGutter">
+                    <div class="Grid-cell u-sm-size3of12">
+                        <h2 class="">{{ section.title |  }}</h2>
+                    </div>
+                    <div class="Grid-cell u-sm-size9of12">
+                        <div class="s-section">
+                            {{ section.copy | markdownify }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        {% endfor %}
+
+    </div>
+</main>
+
+<footer class="c-footer">
+    <div class="o-container">
+        <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-sm-before3of12 u-sm-size9of12">
+                <p class="">Copyright © 2016 Melbourne Soul. <span class="u-smDown-lineBreak">Site by <a href="http://www.patternworks.com.au">Patternworks</a>.</span></p>
+            </div>
+        </div>
+    </div>
+</footer>
