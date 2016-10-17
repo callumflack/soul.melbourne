@@ -5,4 +5,5 @@ A Jekyll site served by Zeit.
 ## Setup
 
 `$ bundle install`
-`$ npm install`
+
+`$ yarn`
