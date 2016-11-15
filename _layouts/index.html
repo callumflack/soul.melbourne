@@ -26,7 +26,28 @@ layout: default
 		</div>
 	</div>
 
+    <div class="c-nav-wrapper">
+        <div class="o-container">
+            <nav class="c-nav" id="nav">
+                {% comment %}
+                {% for section in page.sections %}
+                    <div class="c-nav-item"><a href="#{{ section.id | remove: " " }}">{{ section.id }}</a></div>
+                {% endfor %}
+                {% endcomment %}
+                <div class="c-nav-item"><a href="#TheNash2016">The Nash<span class="u-smDown-hide"> 2016</span></a></div>
+                <div class="c-nav-item"><a href="#Thursday">Thurs<span class="u-smDown-hide">day</span></a></div>
+                <div class="c-nav-item"><a href="#Friday">Friday</a></div>
+                <div class="c-nav-item"><a href="#Saturday">Sat<span class="u-smDown-hide">urday</span></a></div>
+                <div class="c-nav-item"><a href="#Sunday">Sunday</a></div>
+                <div class="c-nav-item"><a href="#GettingThere"><span class="u-sm-hide">PT</span><span class="u-smDown-hide">Getting there</span></a></div>
+                <div class="c-nav-item"><a href="#ContactUs">Contact<span class="u-smDown-hide"> Us</span></a></div>
+            </nav>
+        </div>
+    </div>
 </header>
+
+
+
 
 <main class="c-main" aria-label="Content">
 
@@ -34,7 +55,10 @@ layout: default
 
         {% for section in page.sections %}
 
-            <section class="c-section {% if section.locations %}c-section--locations{% endif %}">
+            <section
+                class="c-section {% if section.locations %}c-section--locations{% endif %}"
+                id="{{ section.id | remove: " " }}">
+
                 {% if section.headline %}
                     <h1 class=""><span><em>“</em>This Gets To Me<em>”</em></span></h1>
                 {% endif %}
@@ -44,9 +68,38 @@ layout: default
                         <h2 class="">{{ section.title |  }}</h2>
                     </div>
                     <div class="Grid-cell u-sm-size9of12">
-                        <div class="s-section">
-                            {{ section.copy | markdownify }}
-                        </div>
+                        {% if section.copy %}
+                            <div class="s-section">
+                                {{ section.copy | markdownify }}
+                            </div>
+                        {% endif %}
+
+
+                        {% comment %}
+                        ---------------------------------------------
+                            The schedule
+                        ---------------------------------------------
+                        {% endcomment %}
+
+                        {% if section.id == 'Thursday' %}
+                            {% for timeblock in site.data.thursday %}
+                                {% include schedule.html %}
+                            {% endfor %}
+                        {% elsif section.id == 'Friday' %}
+                            {% for timeblock in site.data.friday %}
+                                {% include schedule.html %}
+                            {% endfor %}
+                        {% elsif section.id == 'Saturday' %}
+                            {% for timeblock in site.data.saturday %}
+                                {% include schedule.html %}
+                            {% endfor %}
+                        {% elsif section.id == 'Sunday' %}
+                            {% for timeblock in site.data.sunday %}
+                                {% include schedule.html %}
+                            {% endfor %}
+                        {% endif %}
+
+
                     </div>
                 </div>
             </section>

@@ -1,0 +1,19 @@
+- location: Exford Hotel, 8pm-late
+  address: "[199 Russell St, Cnr Russell and Little Bourke Streets](https://www.google.com.au/maps/place/Exford+Hotel/@-37.811781,144.9652553,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad642c977d7cbcb:0x731d751185b0705c!8m2!3d-37.811781!4d144.967444)"
+
+  levels:
+  - level:
+    name: Dee-Jays
+    list:
+    - time: 8pm
+      dj: Carol Quinlan
+    - time: 8:45pm
+      dj: Mark Mallett
+    - time: 9:30pm
+      dj: Mark Hartells
+    - time: 10:15pm
+      dj: Joel Hamlin
+    - time: 11pm
+      dj: Frank Driscoll
+    - time: 11:45pm
+      dj: Mick Smith and Justin Roche

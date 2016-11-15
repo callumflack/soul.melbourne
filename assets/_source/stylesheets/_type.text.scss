@@ -58,10 +58,17 @@
     );
 }
 
+@mixin textXs() {
+	@include textTemplate(
+		$mixinSize: text--xs,
+		$mixinLetterSpacing: 0.03em
+	);
+}
+
 @mixin textSm() {
 	@include textTemplate(
 		$mixinSize: text--sm,
-		$mixinLetterSpacing: 0.01em
+		$mixinLetterSpacing: 0.0125em
 	);
 }
 
@@ -213,12 +220,6 @@ a > strong {
     span.u-smDown-lineBreak {
         display: table !important;
         //margin: auto; // 1.
-    }
-}
-
-@include media-breakpoint-down(sm) {
-    .u-smDown-hide {
-        display: none !important;
     }
 }
 

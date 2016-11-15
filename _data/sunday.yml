@@ -1,0 +1,33 @@
+- location: Memo Music Hall, 3pm–12am
+  address: "[88 Acland Street, St Kilda (enter via Albert St)](https://www.google.com.au/maps/search/memo+music+hall/@-37.8677166,144.9785893,19z)"
+
+  levels:
+  - level:
+    name: Dee-Jays
+    list:
+    - time: 3pm
+      dj: Mark Webb
+    - time: 3:45pm
+      dj: Steve Hibbert
+    - time: 4:30pm
+      dj: Tim Partridge
+    - time: 5:15pm
+      dj: Keith Collett
+    - time: 6pm
+      dj: Alan Dyer
+    - time: 6:45pm
+      dj: Steve Parker
+    - time: 7:30pm
+      dj: Peter Fev
+    - time: 8:15pm
+      dj: Margaret Wood
+    - time: 9pm
+      dj: Duncan McAllister
+    - time: 9:45pm
+      dj: Stephen Williams
+    - time: 10:30pm
+      dj: Barry Simpson
+    - time: 11:15pm
+      dj: Handover
+    - time: 11:30pm
+      dj: Simon Evans

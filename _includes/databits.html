@@ -1,0 +1,67 @@
+{% if section.day %}
+    {% for day in site.data.schedule.day[page.section.day] %}
+        <div class="s-section">
+
+            {% comment %}print morning and night partitions{% endcomment %}
+            {% for partition in day.contents %}
+                {{ partition.copy | markdownify }}
+
+                {% comment %}print up or downstairs{% endcomment %}
+                {% for level in partition.contents %}
+                    {% if level %}<p>{{ level.level }}</p>{% endif %}
+
+                    {% comment %}print level lists{% endcomment %}
+                    {% for session in level.list %}
+                        <p><span>{{ session.time }}</span> {{ session.dj }}</p>
+                    {% endfor %}
+
+                {% endfor %}
+            {% endfor %}
+
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+{% if section.day %}
+    {% for timeblock in site.data.schedule.thursday %}
+        <div class="s-section">
+            {% for location in timeblock.location %}
+                <h3>{{ location }}</h3>
+            {% endfor %}
+            {{ timeblock.address | markdownify }}
+
+            {% for level in timeblock.contents %}
+                <h3>{{ level.list }}</h3>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+{% assign day = site.data.schedule.friday %}
+{% case day %}
+    {% when section.day == 'Thursday' %}site.data.schedule.thursday
+    {% when section.day == 'Friday' %}site.data.schedule.friday
+{% endcase %}
+
+{% assign handle = product.handle %}
+{% case handle %}
+    {% when 'coffee-cup' %}
+        {% include 'promo-coffee-cup' %}
+    {% when 'cup-saucer' %}
+        {% include 'promo-cup-saucer' %}
+{% endcase %}
+
+
+
+{% if section.day == 'Thursday' %}
+    {% for timeblock in site.data.schedule.thursday %}
+        {% include schedule.html %}
+    {% endfor %}
+{% elsif section.day == 'Friday' %}
+    {% for timeblock in site.data.schedule.friday %}
+        {% include schedule.html %}
+    {% endfor %}
+
+{% endif %}

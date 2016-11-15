@@ -1,0 +1,52 @@
+- location: Riverland Bar, 12pm-4pm
+  address: |
+    [Vaults 1-9, Federation Wharf, Federation Square](https://www.google.com.au/maps?q=riverland+bar&bav=on.2,or.&bvm=bv.135258522,d.d24&biw=1229&bih=459&um=1&ie=UTF-8&sa=X&sqi=2&ved=0ahUKEwiBm9uGqtHPAhVS1GMKHc60CXQQ_AUIBigB)
+
+- location: Thornbury Theatre, 7pm-2am
+  address: |
+    [859 High Street, Thornbury](https://www.google.com.au/maps/place/The+Thornbury+Theatre/@-37.7547037,144.9989444,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad6448bc284a573:0x6dc4e3e442bffe70!8m2!3d-37.7547037!4d145.0011331)
+
+  levels:
+  - level:
+    name: upstairs Dee-Jays
+    list:
+    - time: 7pm
+      dj: Boyne Callanan
+    - time: 8pm
+      dj: Dave Adkin
+    - time: 8:45pm
+      dj: Alan Harrison
+    - time: 9:30pm
+      dj: Gail Smith
+    - time: 10.15pm
+      dj: Alan Taylor
+    - time: 11pm
+      dj: Kev Core
+    - time: 11:45pm
+      dj: Mark Speakman
+    - time: 12:30am
+      dj: John Phillips
+    - time: 1:15am
+      dj: Nigel Loveless
+
+  - level:
+    name: downstairs Dee-Jays
+    list:
+    - time: 7pm
+      dj: Michael Micallef
+    - time: 8pm
+      dj: Ronnie Pearce
+    - time: 8:45pm
+      dj: Howard Duff
+    - time: 9:30pm
+      dj: Ainsley White
+    - time: 10.15pm
+      dj: Dave Boots
+    - time: 11pm
+      dj: Gavin Needham
+    - time: 11:45pm
+      dj: Brian Williams
+    - time: 12:30am
+      dj: Paul Hannigan
+    - time: 1:15am
+      dj: Samantha Goldie

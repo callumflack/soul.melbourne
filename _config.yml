@@ -41,6 +41,7 @@ exclude:
 - gulpfile.js
 - node_modules
 - package.json
+- yarn.lock
 - README.md
 - TODO.md
 - DESCRIPTION.md

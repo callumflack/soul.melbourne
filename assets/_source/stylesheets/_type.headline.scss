@@ -26,6 +26,10 @@
 	margin-bottom: $mixinMarginBottom;
 	text-align: left;
 
+    // vertical rhythm
+	margin-bottom: $paragraphSpace * 0.75;
+	@include media-breakpoint-up(sm) { margin-bottom: $paragraphSpace; }
+
 	// sizes
 	font-size: fontsize($mixinSize, xs);
 	@include media-breakpoint-up(sm) { font-size: fontsize($mixinSize, sm); }
@@ -53,8 +57,7 @@
         $mixinLineHeight: 1,
         $mixinSize: display
     );
-
-    margin-bottom: $blockSpace * 0.9;
+    margin-bottom: $blockSpace * 0.9 !important;
     text-align: center;
     text-transform: uppercase;
 
@@ -73,7 +76,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-        span { border-width: 7px; }
+        span { border-width: 6px; }
     }
 }
 
@@ -86,11 +89,12 @@
 @mixin headlineSm() {
     @include headlineTemplate(
         $mixinColor: palette(text),
-        $mixinFont: $font-text-ultrabold,
+        $mixinFont: $font-text-bold,
+        $mixinLetterSpacing: 0.04em,
         $mixinLineHeight: $base-line-height-unit,
-        $mixinSize: headline--sm
+        $mixinSize: text
     );
-
+    margin-bottom: 0 !important;
     text-transform: uppercase;
 
     &:not(:first-child) {
@@ -103,6 +107,7 @@
         $mixinSize: headline--xs,
         $mixinLetterSpacing: 0.012em
     );
+    margin-bottom: 0 !important;
 }
 
 
@@ -112,8 +117,9 @@
 // --------------------------------------------------------------------------
 
 h1                  { @include display(); }
-h2                  { @include headline(); margin-bottom: $paragraphSpace; }
+h2                  { @include headline(); }
 h3                  { @include headlineSm(); }
+h4                  { @include textSm(); font-family: $font-text-bold; text-transform: uppercase; }
 
 
 .c-display          { @include display(); }

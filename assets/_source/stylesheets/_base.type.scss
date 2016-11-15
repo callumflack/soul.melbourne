@@ -41,6 +41,18 @@ html {
 // Consistent vertical rhythm
 // --------------------------------------------------------------------------
 
+@mixin verticalRhythm() {
+	&:not(:last-child) {
+		margin-bottom: $paragraphSpace * 0.75;
+	}
+
+	@include media-breakpoint-up(sm) {
+		&:not(:last-child) {
+			margin-bottom: $paragraphSpace;
+		}
+	}
+}
+
 /* uncss:ignore */
 // h1, h2, h3, h4, h5, h6,
 // li,
@@ -49,13 +61,5 @@ blockquote, p, address,
 table, time,
 fieldset,
 pre {
-    &:not(:last-child) {
-        margin-bottom: $paragraphSpace * 0.75;
-    }
-
-    @include media-breakpoint-up(sm) {
-        &:not(:last-child) {
-            margin-bottom: $paragraphSpace;
-        }
-    }
+    @include verticalRhythm();
 }

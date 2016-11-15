@@ -1,0 +1,17 @@
+<div class="s-section s-section--mapLink">
+    {% for location in timeblock.location %}
+        <h3>{{ location }}</h3>
+    {% endfor %}
+
+    {{ timeblock.address | markdownify }}
+
+    {% for level in timeblock.levels %}
+        {% if level.name %}<h4>{{ level.name }}</h4>{% endif %}
+        <div class="s-list">
+            {% for session in level.list %}
+                <p class="c-text--sm"><span>{{ session.time }}</span> {{ session.dj}}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+</div>

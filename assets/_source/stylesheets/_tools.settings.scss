@@ -36,6 +36,7 @@ $palette: (
 	neutral-dark               : darken(#f0eeeb, 9%),
 	neutral-light              : lighten(#f0eeeb, 4%),
 	brand                      : #0092ff,
+	brand-light                : #B5DFFD,
 	brand-complement           : #fff59f,
 	brand-counter              : #00abff,
 	modal-background           : #151515,
@@ -97,23 +98,33 @@ $container-max-widths: (
 // --------------------------------------------------------------------------
 
 $fontsizes: (
-	text--sm: (
+	text--xs: (
 		xs            : 11px,
-		sm            : 14px,
-        lg            : 16px
+		sm            : 12px,
+        lg            : 14px
+	),
+	text--sm: (
+		xs            : 13px,
+		sm            : 16px,
+        lg            : 19px
 	),
 	text: (
 		xs            : 18px,
 		sm            : 22px,
 		lg            : 25px
 	),
+    headline--sm: (
+        xs            : 16px,
+        sm            : 20px,
+        lg            : 23px
+    ),
     headline: (
-        xs            : 22px,
+        xs            : 24px,
         sm            : 27px,
         lg            : 30px
     ),
     display: (
-        xs            : 30px,
+        xs            : 26px,
         sm            : 50px,
         lg            : 66px
     ),
@@ -129,12 +140,7 @@ $fontsizes: (
 		xs            : 18px,
 		sm            : 22px,
 		lg            : 27px
-	),
-    headline--sm: (
-        xs            : 15px,
-        sm            : 18px,
-        lg            : 20px
-    )
+	)
 );
 
 

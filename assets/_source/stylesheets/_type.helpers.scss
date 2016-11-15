@@ -54,9 +54,13 @@
     //margin-top:
 }
 
+
+// Alt paragraph spacers
+// --------------------------------------------------------------------------
+
 //p + cite { margin-top: space(1); }
 h2 + h3  { margin-top: space(0.2); }
-h3 + p   { margin-top: space(0.4); }
+//h3 + p   { margin-top: $paragraphSpace * 0.5; }
 
 
 

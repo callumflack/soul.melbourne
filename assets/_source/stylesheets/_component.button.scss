@@ -48,8 +48,8 @@
 @mixin buttonText() {
     @include typeReset();
     @include textRg();
-    background-color: invisible;
-    color: palette(background);
+    background-color: transparent;
+    color: palette(text);
     font-family: $font-text-bold;
     line-height: map-fetch($button-height, base);
     padding-top: $inputLineHeightAdjustment;

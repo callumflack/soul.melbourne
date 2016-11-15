@@ -1,0 +1,52 @@
+- location: Arbory Bar, from 1pm
+  address: |
+    [Flinders Street Railway Station, 1 Flinders Walk](https://www.google.com.au/maps/place/Arbory+Bar+%26+Eatery/@-37.8189372,144.9639345,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad642b3e9495ce7:0xc999bbc26f34e593!8m2!3d-37.8189372!4d144.9661232)
+
+- location: Thornbury Theatre, 7pm-2am
+  address: |
+    [859 High Street, Thornbury](https://www.google.com.au/maps/place/The+Thornbury+Theatre/@-37.7547037,144.9989444,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad6448bc284a573:0x6dc4e3e442bffe70!8m2!3d-37.7547037!4d145.0011331)
+
+  levels:
+  - level:
+    name: upstairs Dee-Jays
+    list:
+    - time: 7pm
+      dj: Peter Cook
+    - time: 8pm
+      dj: Keith Miller
+    - time: 8:45pm
+      dj: Netti Page
+    - time: 9:30pm
+      dj: Bob Norman
+    - time: 10.15pm
+      dj: Gary Williamson
+    - time: 11pm
+      dj: Vince Peach
+    - time: 11:45pm
+      dj: Pete Fowler
+    - time: 12:30am
+      dj: George Coumbis
+    - time: 1:15am
+      dj: Denny Johnson
+
+  - level:
+    name: downstairs Dee-Jays
+    list:
+    - time: 7pm
+      dj: Marco Codato
+    - time: 8pm
+      dj: Chrissie Flisk
+    - time: 8:45pm
+      dj: Daniel Harvey
+    - time: 9:30pm
+      dj: Rob Goodburn
+    - time: 10.15pm
+      dj: John Smith
+    - time: 11pm
+      dj: Kev McCord
+    - time: 11:45pm
+      dj: Bernhard Schmitz
+    - time: 12:30am
+      dj: Dallas Hyde
+    - time: 1:15am
+      dj: Todd Cavender
